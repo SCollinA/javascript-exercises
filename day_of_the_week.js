@@ -1,8 +1,14 @@
+let day = 0;
+
 while (true) {
     try {
-        let day = Number(prompt(`Day (0-6)? `));
+        day = Number(prompt(`Day (0-6)? `));
+        break
     } catch (error) {
         alert(`Please enter a number.`)
     }
 }
-console.log(day)
+
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+console.log(days[day])
