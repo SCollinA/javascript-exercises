@@ -9,7 +9,7 @@ body {
     background-color: peachpuff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 /* everything in body */
@@ -20,4 +20,8 @@ body > * {
 
 .quoteDisplay {
     font-size: 2rem;
+}
+
+.stringGenerator img {
+    width: 100%;
 }
