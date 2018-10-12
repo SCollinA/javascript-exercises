@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -18,16 +19,34 @@ body {
 body > * {
     outline: 1px dashed fuchsia;
     text-align: center;
+    height: 33%;
+    margin: 10px;
+}
+
+.stringGenerator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .stringGenerator > * {
     margin: auto;
 }
 
+.stringGenerator img {
+    width: 100%;
+}
+
 .quoteDisplay {
     font-size: 2rem;
 }
 
-.stringGenerator img {
-    width: 100%;
-}
+/* .stringGenerator button {
+    position: relative;
+    top: 0px;
+} */
+
+/* 
+.addFortuneSection {
+    height: 20px;
+} */

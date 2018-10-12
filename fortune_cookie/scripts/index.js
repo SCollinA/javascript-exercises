@@ -88,6 +88,13 @@ function createFortuneButton() {
     return theButton;
 }
 
+// function addFortuneSection() {
 const theBody = document.querySelector('body');
 theBody.appendChild(createFortuneSection());
-theBody.children
+const scripts = document.querySelectorAll('script');
+theBody.appendChild(scripts[scripts.length - 1]);
+
+// }
+
+// addFortuneButton = document.querySelector('.addFortuneSection');
+// addFortuneButton.addEventListener('click', addFortuneSection);
