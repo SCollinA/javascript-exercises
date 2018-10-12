@@ -19,11 +19,6 @@ let lottoTrigger = document.querySelector('[data-trigger="lottoNumbers"]');
 
 let lottoQuote = document.querySelector('[data-output="lottoNumbers"]');
 
-// let lottoNumbers = [
-//     '10 20 30 40 50 60',
-//     '20 30 40 50 60 10',
-//     '30 40 50 60 10 20'
-// ];
 // // addEventListener accepts string for kind of event
 // // and function to execute on event
 sadTrigger.addEventListener('click', makeSadFact);
@@ -47,3 +42,38 @@ function makeLottoNumbers() {
     }
     lottoQuote.textContent = lottoNumbers.join(', ');
 }
+
+function createFortuneSection() {
+    const theSection = document.createElement('section');
+    theSection.classList.add('stringGenerator');
+    theSection.appendChild(createFortuneHeader());
+    theSection.appendChild(createFortuneDiv());
+    theSection.appendChild(createFortuneButton());
+    return theSection;
+}
+
+function createFortuneHeader() {
+    const theHeader = document.createElement('h1');
+    theHeader.textContent = 'Here is your fortune.';
+
+    return theHeader;
+}
+
+function createFortuneDiv() {
+    const theDiv = document.createElement('div');
+    theDiv.classList.add('quoteDisplay');
+    theDiv.textContent = 'Leave it unknown.';
+
+    return theDiv;
+}
+
+function createFortuneButton() {
+    const theButton = document.createElement('button');
+    theButton.textContent = 'Click here for a surprise';
+    theButton.setAttribute('data-trigger', '');
+
+    return theButton;
+}
+
+const theBody = document.querySelector('body');
+theBody.appendChild(createFortuneSection());
