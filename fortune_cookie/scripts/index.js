@@ -43,6 +43,14 @@ function makeLottoNumbers() {
     lottoQuote.textContent = lottoNumbers.join(', ');
 }
 
+let fortunes = [
+    'You will die someday.',
+    'You have a name.',
+    'The sky is blue (unless it\'s cloudy)',
+    'You will finish this sentence.',
+    'You will send your money to Collin.'
+]
+
 function createFortuneSection() {
     const theSection = document.createElement('section');
     theSection.classList.add('stringGenerator');
@@ -62,7 +70,6 @@ function createFortuneHeader() {
 function createFortuneDiv() {
     const theDiv = document.createElement('div');
     theDiv.classList.add('quoteDisplay');
-    theDiv.textContent = 'Leave it unknown.';
 
     return theDiv;
 }
@@ -71,9 +78,16 @@ function createFortuneButton() {
     const theButton = document.createElement('button');
     theButton.textContent = 'Click here for a surprise';
     theButton.setAttribute('data-trigger', '');
+    theButton.addEventListener('click', () => {
+        console.log('surprise button pressed.');
+        const theDivs = document.querySelectorAll('.quoteDisplay');
+        theDiv = theDivs[theDivs.length - 1];
+        theDiv.textContent = fortunes[Math.floor((Math.random() * fortunes.length))];
+    });
 
     return theButton;
 }
 
 const theBody = document.querySelector('body');
 theBody.appendChild(createFortuneSection());
+theBody.children

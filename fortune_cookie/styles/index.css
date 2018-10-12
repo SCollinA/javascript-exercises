@@ -12,10 +12,16 @@ body {
     justify-content: space-around;
 }
 
+
+
 /* everything in body */
 body > * {
     outline: 1px dashed fuchsia;
     text-align: center;
+}
+
+.stringGenerator > * {
+    margin: auto;
 }
 
 .quoteDisplay {
